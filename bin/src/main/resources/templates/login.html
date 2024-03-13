@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Login Page</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!-- <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" /> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+	            <div class="panel panel-default">
+	                <div class="panel-heading">
+	                    <h3 class="panel-title">Login</h3>
+	                </div>
+	                <div class="panel-body">
+	                    <form th:action="@{/auth}" method="POST">
+	                        <div class="form-group">
+	                            <input type="text" class="form-control" name="username" placeholder="Your username" />
+	                        </div>
+	                        <div class="form-group">
+	                            <input type="password" class="form-control" name="password" placeholder="Your password" />
+	                        </div>
+	                        <button type="submit" class="btn btn-default">login</button>
+	                    </form>
+	                </div>
+	            </div>
+           	</div>
+		</div>
+	</div>
+	<div class="modal fade" tabindex="-1" role="dialog" id="loginErrorModal">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">Login unsuccessful</h4>
+	            </div>
+	            <div class="modal-body"></div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal-dialog -->
+	</div><!-- /.modal --> 
+    <!-- <div class="main-content">
+        <h3>Login to continue</h3>
+        <form th:action="@{/auth}" method="POST">
+            <input type="text" name="username" placeholder="Your username" /><br />
+            <input type="password" name="password" placeholder="Your password" /><br />
+            <button type="submit">Login</button> <br />
+        </form>
+    </div>  -->
+</body>
+</html>
