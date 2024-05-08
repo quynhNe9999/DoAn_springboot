@@ -13,9 +13,10 @@ public class SpringSecurityDemoApplication {
 	        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 	        
 	        // Mã hóa mật khẩu với salt ngẫu nhiên
-	        String encodedPassword = passwordEncoder.encode(rawPassword);
-	        
-	        System.out.println("Mật khẩu gốc: " + rawPassword);
+	        String encodedPassword;
+        encodedPassword = passwordEncoder.encode(rawPassword);
+
+        System.out.println("Mật khẩu gốc: " + rawPassword);
 	        System.out.println("Mật khẩu đã mã hóa: " + encodedPassword);
 	    }
 	
