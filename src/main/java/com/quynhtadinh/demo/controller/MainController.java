@@ -20,11 +20,11 @@ public class MainController implements ErrorController{
 	@Autowired
 	AuthorityDAO authorityDAO;
 	
-//	@RequestMapping(value = "/", method=RequestMethod.GET)
-//	public  String home (){
-//		return "<button>M</button>";
-//	}
-//
+	@RequestMapping(value = "/", method=RequestMethod.GET)
+	public  String home (){
+		return "<button>M</button>";
+	}
+
 	@RequestMapping(value="/authority", method=RequestMethod.GET)
 	public  String getAuthority(){
 		String result = authorityDAO.findOne(1).getName().name();

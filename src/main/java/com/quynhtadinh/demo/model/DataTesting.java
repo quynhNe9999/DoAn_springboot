@@ -39,7 +39,7 @@ public class DataTesting implements ApplicationListener<ContextRefreshedEvent>{
 		// Admin account
 	    if (userDAO.findByUsername("admin") == null) {
 	    	Date date = new Date();
-	        Users admin = new Users("admin", passwordEncoder.encode("admin"), date);
+	        Users admin = new Users("admin", passwordEncoder.encode("123"), date);
 	        List<Authority> authorities = new ArrayList<Authority>();
 	        authorities.add(authDAO.findOne(1));
 	        admin.setAuthorities(authorities);
@@ -49,7 +49,7 @@ public class DataTesting implements ApplicationListener<ContextRefreshedEvent>{
 	    // User account
 	    if (userDAO.findByUsername("users") == null) {
 	    	Date date = new Date();
-	        Users user = new Users("users", passwordEncoder.encode("users"), date);
+	        Users user = new Users("users", passwordEncoder.encode("123"), date);
 	        List<Authority> authorities = new ArrayList<Authority>();
 	        authorities.add(authDAO.findOne(2));
 	        user.setAuthorities(authorities);
@@ -59,7 +59,7 @@ public class DataTesting implements ApplicationListener<ContextRefreshedEvent>{
 	    // Staff account
 	    if (userDAO.findByUsername("staff") == null) {
 	    	Date date = new Date();
-	        Users staff = new Users("staff", passwordEncoder.encode("staff"), date);
+	        Users staff = new Users("staff", passwordEncoder.encode("123"), date);
 	        List<Authority> authorities = new ArrayList<Authority>();
 	        authorities.add(authDAO.findOne(3));
 	        staff.setAuthorities(authorities);

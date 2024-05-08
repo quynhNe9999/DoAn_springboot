@@ -9,15 +9,6 @@ public class SpringSecurityDemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringSecurityDemoApplication.class, args);
-		 String rawPassword = "123";
-	        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	        
-	        // Mã hóa mật khẩu với salt ngẫu nhiên
-	        String encodedPassword;
-        encodedPassword = passwordEncoder.encode(rawPassword);
-
-        System.out.println("Mật khẩu gốc: " + rawPassword);
-	        System.out.println("Mật khẩu đã mã hóa: " + encodedPassword);
 	    }
 	
 }
